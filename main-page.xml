@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="تطبيق البلوتوث والموسيقى" />
+    
+    <StackLayout class="p-4">
+        <Button text="{{ isScanning ? 'جاري البحث...' : 'بحث عن الأجهزة' }}" 
+                tap="{{ startScanning }}" 
+                class="btn" 
+                isEnabled="{{ !isScanning }}" />
+        
+        <Label text="الأجهزة المتوفرة:" 
+               class="h2 text-center m-y-4" 
+               visibility="{{ devices.length > 0 ? 'visible' : 'collapsed' }}" />
+        
+        <ListView items="{{ devices }}" class="list-group" height="200">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ name }}" class="h3" />
+                    <Button text="اتصال" 
+                            tap="{{ $parent.connectToDevice }}" 
+                            class="btn" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <Label text="{{ countdownText }}" 
+               class="h1 text-center m-t-4" 
+               visibility="{{ countdownText ? 'visible' : 'collapsed' }}" />
+               
+        <Label text="{{ errorMessage }}"
+               class="text-red-500 text-center m-t-2"
+               visibility="{{ errorMessage ? 'visible' : 'collapsed' }}" />
+    </StackLayout>
+</Page>

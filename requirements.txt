@@ -1,0 +1,18 @@
+# Core Dependencies
+nativescript-core>=8.8.0
+nativescript-bluetooth>=3.0.0
+nativescript-audio>=6.0.0
+
+# Development Dependencies
+nativescript-preview-cli>=1.0.13
+nativescript-stackblitz>=0.0.8
+nativescript-tailwind>=2.1.0
+nativescript-types-minimal>=8.8.0
+nativescript-webpack>=5.0.0
+tailwindcss>=3.4.0
+typescript>=5.4.0
+
+# Python Dependencies
+pip>=24.0
+setuptools>=69.0
+wheel>=0.42.0

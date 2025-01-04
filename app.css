@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL Support */
+Page {
+  direction: rtl;
+}
+
+.btn {
+  font-family: system-font;
+  font-size: 16;
+  padding: 10;
+  margin: 10;
+  background-color: #007AFF;
+  color: white;
+  border-radius: 5;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.list-group-item {
+  padding: 10;
+  margin: 5 0;
+  background-color: #f8f9fa;
+  border-radius: 5;
+}
+
+.text-center {
+  text-align: center;
+}
